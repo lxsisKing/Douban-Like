@@ -6,10 +6,14 @@ Scrapy与Django的结合使用到了scrapy-djangoitem扩展。
 相关地址：https://pypi.org/project/scrapy-djangoitem/
   
 **安装**  
-```pip install scrapy-djangoitem```
+```
+    pip install scrapy-djangoitem
+```
 
 **使用**  
- ```from scrapy_djangoitem import DjangoItem```
+ ```
+     from scrapy_djangoitem import DjangoItem
+ ```
  
  
  
