@@ -28,7 +28,7 @@ pip install scrapy-djangoitem
  
  **安装**
 ```shell
-    pip install mysqlclient
+pip install mysqlclient
 ````
 
 **更改setting.py设置文件**
@@ -50,6 +50,13 @@ DATABASES = {
     }
 }
 ```
+
+### 前端
+
+由于自己前端能力较弱，同时审美设计能力不够。所以前端相关代码均使用现成素材进行二次开发。
+
+相关界面显示如下。
+
     
  
  
