@@ -3,7 +3,6 @@
 *.pot
 *.pyc
 __pycache__
-.DoubanLike/settings.py
 db.sqlite3
 media
  
