@@ -34,6 +34,7 @@ pip install mysqlclient
 **更改setting.py设置文件**
 
 ```python
+# 这两行代码为连接数据库关键
 import pymysql
 pymysql.install_as_MySQLdb()
 
