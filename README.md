@@ -58,6 +58,16 @@ DATABASES = {
 相关界面显示如下。
 
 ![alt 第一张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/1.jpg)
+
+![alt 第二张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/2.jpg)
+
+![alt 第三张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/3.jpg)
+
+![alt 第四张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/4.jpg)
+
+![alt 第五张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/5.jpg)
+
+![alt 第六张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/6.jpg)
     
  
  
