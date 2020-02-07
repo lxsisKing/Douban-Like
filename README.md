@@ -57,6 +57,7 @@ DATABASES = {
 
 相关界面显示如下。
 
+![alt 第一张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/1.jpg)
     
  
  
