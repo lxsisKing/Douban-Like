@@ -55,7 +55,7 @@ DATABASES = {
 
 由于自己前端能力较弱，同时审美设计能力不够。所以前端相关代码均使用现成素材进行二次开发。
 
-相关界面显示如下。
+相关界面显示如下：
 
 ![alt 第一张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/1.jpg)
 
