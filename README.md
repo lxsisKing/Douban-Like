@@ -34,6 +34,7 @@ pip install mysqlclient
 **更改setting.py设置文件**
 
 ```python
+# 这两行代码为连接数据库关键
 import pymysql
 pymysql.install_as_MySQLdb()
 
@@ -55,8 +56,19 @@ DATABASES = {
 
 由于自己前端能力较弱，同时审美设计能力不够。所以前端相关代码均使用现成素材进行二次开发。
 
-相关界面显示如下。
+相关界面显示如下：
 
+![alt 第一张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/1.jpg)
+
+![alt 第二张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/2.jpg)
+
+![alt 第三张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/3.jpg)
+
+![alt 第四张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/4.jpg)
+
+![alt 第五张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/5.jpg)
+
+![alt 第六张图](https://github.com/lxsisKing/Douban-Like/blob/master/project_image/6.jpg)
     
  
  
