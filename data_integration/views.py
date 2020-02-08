@@ -7,9 +7,9 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def data(request):
+def index(request):
     pass
-    return render(request, 'data_integration/data.html')
+    return render(request, 'data_integration/index.html')
 
 
 def year_data_2019(request, movie_type):

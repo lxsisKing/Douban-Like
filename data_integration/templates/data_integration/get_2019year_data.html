@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="{% static 'data_integration/css/base.css' %}" />
+    <title>{{ movie_type }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'data_integration/css/data/base.css' %}" />
     <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 </head>
 
@@ -43,7 +43,7 @@
                     <!-- slide__bg--number用于定义背景 -->
                     <div class="slide__bg slide__bg--3"></div>
                     <!-- word--number用于定义字体 -->
-                    <h6 class="word word--1">{{ movie_type }}</h6>
+                    <p class="word word--1">{{ movie_type }}</p>
                 </div>
                 {% for data in year_rank_data %}
                 <div class="slide">
@@ -62,9 +62,9 @@
             </nav>
         </div>
     </main>
-    <script src="{% static 'data_integration/js/charming.min.js' %}"></script>
-    <script src="{% static 'data_integration/js/anime.min.js' %}"></script>
-    <script src="{% static 'data_integration/js/wordFx.js' %}"></script>
+    <script src="{% static 'data_integration/js/data/charming.min.js' %}"></script>
+    <script src="{% static 'data_integration/js/data/anime.min.js' %}"></script>
+    <script src="{% static 'data_integration/js/data/wordFx.js' %}"></script>
     <script>
         {
             const effects = [

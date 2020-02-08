@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="{% static 'data_integration/css/base.css' %}" />
+	<title>2019年度电影榜单</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'data_integration/css/data/base.css' %}" />
 	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 </head>
 
@@ -41,13 +41,13 @@
 			<div class="slideshow">
 				<div class="slide slide--current">
 					<!-- slide__bg--number用于定义背景 -->
-					<div class="slide__bg slide__bg--1"></div>
+					<div class="slide__bg--2019"></div>
 					<!-- word--number用于定义字体 -->
-					<h6 class="word word--1">2019年度榜单</h6>
+					<h6 class="word word--1"> </h6>
 				</div>
 				{% for type in classify_data_2019_dic %}
 				<div class="slide">
-					<div class="slide__bg slide__bg--1"></div>
+					<div class="slide__bg--2019"></div>
 					<div class="word word--1"><a href="{% url '2019_year_data' type %}" target="_blank" >{{type}}</a></div>
 				</div>
 				{% endfor %}
@@ -62,9 +62,9 @@
 			</nav>
 		</div>
 	</main>
-	<script src="{% static 'data_integration/js/charming.min.js' %}"></script>
-	<script src="{% static 'data_integration/js/anime.min.js' %}"></script>
-	<script src="{% static 'data_integration/js/wordFx.js' %}"></script>
+	<script src="{% static 'data_integration/js/data/charming.min.js' %}"></script>
+	<script src="{% static 'data_integration/js/data/anime.min.js' %}"></script>
+	<script src="{% static 'data_integration/js/data/wordFx.js' %}"></script>
 	<script>
 		{
 			const effects = [
@@ -567,7 +567,7 @@
 					this.DOM = {};
 					this.DOM.el = el;
 					this.DOM.slides = Array.from(this.DOM.el.querySelectorAll('.slide'));
-					this.DOM.bgs = Array.from(this.DOM.el.querySelectorAll('.slide__bg'));
+					// this.DOM.bgs = Array.from(this.DOM.el.querySelectorAll('.slide__bg'));
 					this.DOM.words = Array.from(this.DOM.el.querySelectorAll('.word'));
 					this.slidesTotal = this.DOM.slides.length;
 					this.current = 0;
@@ -594,9 +594,9 @@
 					}
 
 					this.DOM.slides[newPos].style.opacity = 1;
-					this.DOM.bgs[newPos].style.transform = 'none';
+					// this.DOM.bgs[newPos].style.transform = 'none';
 					anime({
-						targets: this.DOM.bgs[currentPos],
+						// targets: this.DOM.bgs[currentPos],
 						duration: 600,
 						easing: [0.2, 1, 0.3, 1],
 						translateY: ['0%', direction === 'next' ? '-100%' : '100%'],
