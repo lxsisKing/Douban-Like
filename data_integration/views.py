@@ -28,16 +28,19 @@ def year_data_2018(request, movie_type):
 #     year_rank_data = models.MovieData2019.objects.all()
 #     return render(request, 'data_integration/index.html', locals())
 
-
+# 获取2019电影榜单的类别
 def classify_2019(request):
+    # 只获取movie_type这一类型的数据
     classify_data = models.MovieData2019.objects.values('movie_type')
     classify_data_2019 = []
+    # 将获取的数据去重
     for movie_type in classify_data:
         if movie_type['movie_type'] not in classify_data_2019:
             classify_data_2019.append(movie_type['movie_type'])
+
     return render(request, 'data_integration/classify_2019.html', {'classify_data_2019_dic': classify_data_2019})
 
-
+# 获取2018电影榜单的类别
 def classify_2018(request):
     classify_data = models.MovieData2018.objects.values('movie_type')
     classify_data_2018 = []

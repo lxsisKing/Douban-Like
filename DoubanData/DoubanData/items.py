@@ -24,7 +24,8 @@ class DoubanDataItem2019(DjangoItem):
     # people_en_name = scrapy.Field()
     # people_profession = scrapy.Field()
     # people_presentation = scrapy.Field()
-    django_model = models.MovieData2019
+    # 通过scrapy_djangoitem将scrapy的items与django的model相结合
+    django_model = models.MovieData2019  # 此处变量名必须为django_model
 
 
 class DoubanDataItem2018(DjangoItem):
@@ -40,5 +41,3 @@ class DoubanDataItem2018(DjangoItem):
     # people_profession = scrapy.Field()
     # people_presentation = scrapy.Field()
     django_model = models.MovieData2018
-
-

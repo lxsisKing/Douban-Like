@@ -16,6 +16,7 @@ class Douban2018MovieDataSpider(scrapy.Spider):
                         40, 41, 43, 44, 46, 47, 48, 53, 54, 55, 56, 57, 59, 60]
 
     def parse(self, response):
+        # 由于该页面为json数据存储，所以加载后直接获取
         data = json.loads(response.body.decode('utf-8'))
         kind_num = data['res']['kind']
         if kind_num == 1:
@@ -33,7 +34,7 @@ class Douban2018MovieDataSpider(scrapy.Spider):
                 item['movie_rate'] = subject['rating']
                 item['movie_name'] = subject['title']
                 item['movie_type'] = movie_type['title']
-
+                # 将爬取到的信息传到管道进行处理
                 yield item
                 time.sleep(0.2)
 
@@ -58,7 +59,9 @@ class Douban2018MovieDataSpider(scrapy.Spider):
                 yield item
         '''
 
+        # 组建下一页需要爬取的内容
         i = self.url_num.pop(0)
         next_url = 'https://movie.douban.com/ithil_j/activity/movie_annual2018/widget/' + str(i)
         print(next_url)
+        # 通过yield使用request方法对下一个url进行数据提取。回调函数为self.parse本身
         yield scrapy.Request(next_url, callback=self.parse)
